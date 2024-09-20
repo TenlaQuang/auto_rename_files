@@ -9,7 +9,7 @@ def rename_images(directory: str) -> None:
     files.sort()
 
     # Rename the files
-    for i, file in enumerate(files, start=75):
+    for i, file in enumerate(files):
         # Get the file name without the extension
         name, extension = os.path.splitext(os.path.basename(file))
 
