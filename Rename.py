@@ -9,12 +9,12 @@ def rename_images(directory: str) -> None:
     files.sort()
 
     # Rename the files
-    for i, file in enumerate(files):
+    for i, file in enumerate(files, start=1):
         # Get the file name without the extension
         name, extension = os.path.splitext(os.path.basename(file))
 
         # Construct the new file name with the index and extension
-        new_name = f"{"i"}{i:03d}{extension}"
+        new_name = f"{"i"}{i}{extension}"
 
         # Construct the new file path
         new_path = os.path.join(directory, new_name)
